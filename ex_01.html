@@ -1,71 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentamento</title>
-        <script>
-            function formulario(event) {
-                event.preventDefault();
+    <script>
+        function formulario(event) {
+            event.preventDefault();
 
-                var pnome = document.getElementById("pnome").value;
-                var unome = document.getElementById("unome").value;
-                
-
-                var tecnico = document.getElementById("tecnico").alue;
-                var graduacao = document.getElementById("graduaçâo").value;
-                var prof = document.getElementById("prof").value;
-        alert(pnome + " - "+ unome + " - " tecnico + " - "+ graduacao + " - "+ prof);
-            }
-        </script>
+            var pnome = document.getElementById("pnome").value;
+            var unome = document.getElementById("unome").value;
+            var tecnico = document.getElementById("fav_language").value;
+            var graduacao = document.getElementById("fav_language").value;
+            var prof = document.getElementById("fav_language").value;
+            alert(pnome + " - " + unome + " - " + tecnico + " - " + graduacao + " - " + prof);
+        }
+    </script>
     <form action="/action_page.html">
         <fieldset>
-        <legend>Título</legend>
-        <label for=“pnome">Primeiro nome:</label><br>
-        <input type="text" id="pnome" name="pnome"><br>
-        <label for=“unome">Sobrenome:</label><br>
-        <input type="text" id="unome" name="unome"><br>
+            <legend>Título</legend>
+            <label for=“pnome">Primeiro nome:</label><br>
+            <input type="text" id="pnome" name="pnome"><br>
+            <label for=“unome">Sobrenome:</label><br>
+            <input type="text" id="unome" name="unome"><br>
 
-        <h4>Curso:</h4>
-        <input type="radio" id="html" name="fav_language" value="HTML">
-        <label for="tecnico">Técnico de Informatica</label><br>
-        <input type="radio" id="css" name="fav_language" value="CSS">
-        <label for="graduacao">Graduação - Análise e Desenvolvimento de Sistema</label><br>
-        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-        <label for="prof">Profissionalizante - Programação Web</label>
+            <h4>Curso:</h4>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="tecnico">Técnico de Informatica</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="graduacao">Graduação - Análise e Desenvolvimento de Sistema</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="prof">Profissionalizante - Programação Web</label>
 
-        <h4>Linguagem de Programação de sua preferência:</h4>
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-        <label for="vehicle1">PHP</label><br>
-        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-        <label for="vehicle2">JAVA</label><br>
-        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-        <label for="vehicle3">Python</label>
-        
-        <h4>Escolha um turno:</h4>
-        <select name="cars" id="cars">
-            <option value="manhã">Manhã</option>
-            <option value=“tarde“>Tarde</option>
-            <option value="noite">Noite</option>
-        </select>
-        <br>
-        <label for="browser"><h4> Escolha uma unidade mais proxima a você:</h4></label>
-        <input list="chapecó" name="browser" id="browser">
-        <datalist id="chapecó">
-            <option value="rio grande">
-            <option value="gramado">
-            <option value="mato grosso">
-            <option value="mato grosso do sul">
-            <option value="são paulo">
-        </datalist>
+            <h4>Linguagem de Programação de sua preferência:</h4>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1">PHP</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2">JAVA</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3">Python</label>
 
-        <br><br><input type="submit" value="Enviar" onclick = formulario(event)>
-        </form>        
+            <h4>Escolha um turno:</h4>
+            <select name="cars" id="cars">
+                <option value="manhã">Manhã</option>
+                <option value=“tarde“>Tarde</option>
+                <option value="noite">Noite</option>
+            </select>
+            <br>
+            <label for="browser">
+                <h4> Escolha uma unidade mais proxima a você:</h4>
+            </label>
+            <input list="chapecó" name="browser" id="browser">
+            <datalist id="chapecó">
+                <option value="rio grande">
+                <option value="gramado">
+                <option value="mato grosso">
+                <option value="mato grosso do sul">
+                <option value="são paulo">
+            </datalist>
+
+            <br><br><input type="submit" value="Enviar" onclick=formulario(event)>
+    </form>
 </head>
+
 <body>
     <form>
-        
+
     </form>
 </body>
+
 </html>

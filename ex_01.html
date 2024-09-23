@@ -12,47 +12,61 @@
 
             var pnome = document.getElementById("pnome").value;
             var unome = document.getElementById("unome").value;
-            var tecnico = document.getElementById("fav_language").value;
-            var graduacao = document.getElementById("fav_language").value;
-            var prof = document.getElementById("fav_language").value;
-            alert(pnome + " - " + unome + " - " + tecnico + " - " + graduacao + " - " + prof);
+            var cursos = document.getElementsByName("curso");
+            var linguagem_php = document.getElementById("linguagem_php").checked;
+            var linguagem_java = document.getElementById("linguagem_java").checked;
+            var linguagem_python = document.getElementById("linguagem_python").checked;
+            var turno = document.getElementById("turno").value;
+            var lista = document.getElementById("lista").value;
+
+            var curso = "";
+            for (i = 0; i < cursos.length; i++) {
+                if (cursos[i].checked)
+                curso += " "+ cursos[i].value;
+            }
+            
+            console.log(curso);
+
+            alert(pnome + " - "+ unome + " - "+ curso + " - "+ linguagem_java + " - "+ 
+            linguagem_php + " - "+ linguagem_python + " - "+ turno + " - " + lista + " - ");
+
         }
     </script>
-    <form action="/action_page.html">
+    <form action="">
         <fieldset>
             <legend>Título</legend>
-            <label for=“pnome">Primeiro nome:</label><br>
+            <label for="pnome">Primeiro nome:</label><br>
             <input type="text" id="pnome" name="pnome"><br>
-            <label for=“unome">Sobrenome:</label><br>
+            <label for="unome">Sobrenome:</label><br>
             <input type="text" id="unome" name="unome"><br>
 
             <h4>Curso:</h4>
-            <input type="radio" id="html" name="fav_language" value="HTML">
-            <label for="tecnico">Técnico de Informatica</label><br>
-            <input type="radio" id="css" name="fav_language" value="CSS">
-            <label for="graduacao">Graduação - Análise e Desenvolvimento de Sistema</label><br>
-            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-            <label for="prof">Profissionalizante - Programação Web</label>
+            <input type="radio" name="curso" value="Tecnico de Informatica">
+            <label for="curso">Técnico de Informatica</label><br>
+            <input type="radio" name="curso" value="Graduacao - Analise e Desenvolvimento de Sistema">
+            <label for="curso">Graduação - Análise e Desenvolvimento de Sistema</label><br>
+            <input type="radio" name="curso" value="Profissionalizante - Programacao Web">
+            <label for="curso">Profissionalizante - Programação Web</label>
 
             <h4>Linguagem de Programação de sua preferência:</h4>
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-            <label for="vehicle1">PHP</label><br>
-            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-            <label for="vehicle2">JAVA</label><br>
-            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-            <label for="vehicle3">Python</label>
+            <input type="checkbox" id="linguagem_php" name="linguagem_php" value="PHP">
+            <label >PHP</label><br>
+            <input type="checkbox" id="linguagem_java" name="linguagem_java" value="JAVA">
+            <label >JAVA</label><br>
+            <input type="checkbox" id="linguagem_python" name="linguagem_python" value="Python">
+            <label >Python</label>
 
             <h4>Escolha um turno:</h4>
-            <select name="cars" id="cars">
-                <option value="manhã">Manhã</option>
-                <option value=“tarde“>Tarde</option>
+            <select name="turno" id="turno">
+                <option value="manha">Manhã</option>
+                <option value="tarde">Tarde</option>
                 <option value="noite">Noite</option>
             </select>
             <br>
-            <label for="browser">
+            <label for="lista">
                 <h4> Escolha uma unidade mais proxima a você:</h4>
             </label>
-            <input list="chapecó" name="browser" id="browser">
+            <input list="chapecó" name="lista" id="lista">
             <datalist id="chapecó">
                 <option value="rio grande">
                 <option value="gramado">
@@ -66,9 +80,6 @@
 </head>
 
 <body>
-    <form>
-
-    </form>
 </body>
 
 </html>

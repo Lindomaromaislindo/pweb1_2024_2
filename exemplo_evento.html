@@ -6,9 +6,15 @@
 function sorrir(){
 document.getElementById('cara').src = "imagem/cara-feliz.png";
 }
+    var cara = "";
+    for (i = 0; i < cara.length; i++) {
+    if (cara[i].checked)
+    cara += " "+ cara[i].value;
+}
 </script>
 </head>
 <body>
 <img id="cara" onclick="sorrir()" src="imagem/triste.png" alt="Cara Triste">
+
 </body>
 </html>

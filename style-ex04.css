@@ -4,8 +4,13 @@ body{
 h1 {
     color: #435;
     font-family: 'Robot', sans-serif;
+    padding: 20px;
 }
 p {
     color: #432;
     font-size: 16px;
+    border: solid;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 3px;
 }

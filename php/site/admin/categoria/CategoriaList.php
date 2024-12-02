@@ -1,8 +1,8 @@
 <?php
  include "../db.class.php";
 
-    $db = new db();
-
+    $db = new db('categoria');
+    
     if(!empty($_GET['id'])){
         $db->destroy($_GET['id']);
         header('Location:CategoriaList.php');

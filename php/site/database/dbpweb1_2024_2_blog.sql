@@ -31,14 +31,14 @@ CREATE TABLE IF NOT EXISTS `categoria` (
 -- Copiando estrutura para tabela db_pweb1_2024_2_blog.post
 CREATE TABLE IF NOT EXISTS `post` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(150) COLLATE utf8mb4_bin NOT NULL,
+  `titulo` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `texto` text COLLATE utf8mb4_bin NOT NULL,
   `data_publicacao` datetime NOT NULL,
   `status` varchar(3) COLLATE utf8mb4_bin NOT NULL DEFAULT '0',
   `categoria_id` bigint NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
-  KEY `FK_post_categoria` (`categoria_id`),
-  CONSTRAINT `FK_post_categoria` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`id`)
+  KEY `FK__categoria` (`categoria_id`),
+  CONSTRAINT `FK__categoria` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- Copiando dados para a tabela db_pweb1_2024_2_blog.post: ~0 rows (aproximadamente)
